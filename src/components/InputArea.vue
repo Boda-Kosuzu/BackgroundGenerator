@@ -1,13 +1,13 @@
 <template>
   <div class="input-area">
-    <select v-model="selected">
+    <select v-model="selected" class="input-area--select">
       <option v-for="item in patterns" :key="item.key" :value="item.key">
         {{ item.name }}
       </option>
     </select>
     <div>
-      <ul>
-        <li v-for="(item, index) in colorList" :key="index">
+      <ul class="input-area--colors">
+        <li v-for="(item, index) in colorList" :key="index" class="input-item">
           {{ `色${index + 1}` }}
           <input type="color" :value="item" @change="updateColor(index, $event)" />
         </li>
@@ -46,6 +46,19 @@ export default defineComponent({
 
 <style scoped>
 .input-area {
-  padding: 30px;
+  padding: 60px;
+}
+.input-area--select {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.input-area--colors {
+  font-size: 1.5rem;
+}
+.input-item > input {
+  width: 100px;
+}
+.input-item + .input-item {
+  margin-top: 15px;
 }
 </style>
