@@ -3,7 +3,7 @@
     <defs>
       <g>
         <pattern
-          id="zigzag"
+          id="Argyle"
           x="0"
           y="0"
           width="80"
@@ -33,7 +33,7 @@
     </defs>
 
     <rect :fill="mainColor" x="0" y="0" width="1280" height="720" />
-    <rect fill="url(#zigzag)" x="0" y="0" width="1280" height="720" />
+    <rect fill="url(#Argyle)" x="0" y="0" width="1280" height="720" />
   </svg>
 </template>
 
@@ -42,7 +42,7 @@ import { defineComponent, computed } from "vue";
 import { useStore } from "vuex";
 
 export default defineComponent({
-  name: "Preveiw",
+  name: "Argyle",
   setup() {
     const store = useStore();
     const mainColor = computed(() => store.state.colorList[0]);

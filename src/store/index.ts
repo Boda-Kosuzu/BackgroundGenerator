@@ -4,129 +4,129 @@ export default createStore({
   state: {
     patterns: [
       {
-        key: 'zig-zag',
+        key: 'ZigZag',
         name: 'ジグザグ'
       },
       {
-        key: 'weave',
+        key: 'Weave',
         name: '織り模様'
       },
       {
-       key: 'carbon',
+       key: 'Carbon',
        name: 'カーボン'
       },
       {
-        key: 'argyle',
+        key: 'Argyle',
         name: 'アーガイル'
       },
       {
-        key: 'stars',
+        key: 'Stars',
         name: '星'
       },
       {
-        key: 'bricks',
+        key: 'Bricks',
         name: 'レンガ'
       },
       {
-        key: 'seigaiha',
+        key: 'Seigaiha',
         name: '青海波'
       },
       {
-        key: 'dot',
+        key: 'Dot',
         name: '水玉'
       },
       {
-        key: 'tartan',
+        key: 'Tartan',
         name: 'タータン'
       },
       {
-        key: 'tablecloth',
+        key: 'TableCloth',
         name: 'テーブルクロス'
       },
       {
-        key: 'diagonal-strips',
+        key: 'DiagonalStrips',
         name: '斜線'
       },
       {
-        key: 'vertical-strips',
+        key: 'VerticalStrips',
         name: '縦縞'
       },
       {
-        key: 'horizonal-strips',
+        key: 'HorizonalStrips',
         name: '横縞'
       }
     ],
-    selectedPattern: 'zig-zag',
+    selectedPattern: 'ZigZag',
     colorList: ['#EC173A', '#ECEDDC'],
   },
   mutations: {
     updateSelectedPattern(state, selected) {
       state.selectedPattern = selected
       switch (selected) {
-        case 'zig-zag':
+        case 'ZigZag':
           state.colorList.length = 2;
           state.colorList[0] = '#EC173A';
           state.colorList[1] = '#ECEDDC';
           break;
-        case 'weave':
+        case 'Weave':
           state.colorList.length = 2;
           state.colorList[0] = '#708090';
           state.colorList[1] = '#d9ecff';
           break;
-        case 'stars':
+        case 'Stars':
           state.colorList.length = 2;
           state.colorList[0] = '#232927';
           state.colorList[1] = '#e3d7bf';
           break;
-        case 'seigaiha':
+        case 'Seigaiha':
           state.colorList.length = 2;
           state.colorList[0] = '#c0c0c0';
           state.colorList[1] = '#ffffff';
           break;
-        case 'dot':
+        case 'Dot':
           state.colorList.length = 2;
           state.colorList[0] = '#000011';
           state.colorList[1] = '#ffffff';
           break;
-        case 'tablecloth':
+        case 'TableCloth':
           state.colorList.length = 2;
           state.colorList[0] = '#ffffff';
           state.colorList[1] = '#c80000';
           break;
-        case 'diagonal-strips':
+        case 'DiagonalStrips':
           state.colorList.length = 2;
           state.colorList[0] = '#808080';
           state.colorList[1] = '#ffffff';
           break;
-        case 'vertical-strips':
+        case 'VerticalStrips':
           state.colorList.length = 2;
           state.colorList[0] = '#808080';
           state.colorList[1] = '#ffffff';
           break;
-        case 'horizonal-strips':
+        case 'HorizonalStrips':
           state.colorList.length = 2;
           state.colorList[0] = '#808080';
           state.colorList[1] = '#ffffff';
           break;
-        case 'argyle':
+        case 'Argyle':
           state.colorList.length = 3;
           state.colorList[0] = '#6d695c';
           state.colorList[1] = '#ffffff';
           state.colorList[2] = '#000000';
           break;
-        case 'bricks':
+        case 'Bricks':
           state.colorList.length = 3;
           state.colorList[0] = '#c0c0c0';
           state.colorList[1] = '#bb0000';
           state.colorList[2] = '#dd0000';
           break;
-        case 'tartan':
+        case 'Tartan':
           state.colorList.length = 3;
           state.colorList[0] = '#a0302c';
           state.colorList[1] = '#000000';
           state.colorList[2] = '#ffffff';
           break;
-        case 'carbon':
+        case 'Carbon':
           state.colorList.length = 7
           state.colorList[0] = '#131313';
           state.colorList[1] = '#151515';
@@ -150,45 +150,4 @@ export default createStore({
       commit('updateColor', data)
     }
   },
-  getters: {
-    isArgayle (state) {
-      return state.selectedPattern === 'argyle'
-    },
-    isBricks (state) {
-      return state.selectedPattern === 'bricks'
-    },
-    isVerticalStrips (state) {
-      return state.selectedPattern === 'vertical-strips'
-    },
-    isWeave (state) {
-      return state.selectedPattern === 'weave'
-    },
-    isZigZag (state) {
-      return state.selectedPattern === 'zig-zag'
-    },
-    isCarbon (state) {
-      return state.selectedPattern === 'carbon'
-    },
-    isDiagonalStrips (state) {
-      return state.selectedPattern === 'diagonal-strips'
-    },
-    isDot (state) {
-      return state.selectedPattern === 'dot'
-    },
-    isHorizonalStrips (state) {
-      return state.selectedPattern === 'horizonal-strips'
-    },
-    isSeigaiha (state) {
-      return state.selectedPattern === 'seigaiha'
-    },
-    isStars (state) {
-      return state.selectedPattern === 'stars'
-    },
-    isTablecloth (state) {
-      return state.selectedPattern === 'tablecloth'
-    },
-    isTartan (state) {
-      return state.selectedPattern === 'tartan'
-    },
-  }
 })
