@@ -32,8 +32,16 @@ export default createStore({
         name: '青海波'
       },
       {
+        key: 'Raimon',
+        name: '雷文'
+      },
+      {
         key: 'Dot',
         name: '水玉'
+      },
+      {
+        key: 'DotCircle',
+        name: '水玉の円'
       },
       {
         key: 'Tartan',
@@ -42,6 +50,10 @@ export default createStore({
       {
         key: 'TableCloth',
         name: 'テーブルクロス'
+      },
+      {
+        key: 'GinghamCheck',
+        name: 'ギンガムチェック'
       },
       {
         key: 'DiagonalStrips',
@@ -78,20 +90,39 @@ export default createStore({
           state.colorList[0] = '#232927';
           state.colorList[1] = '#e3d7bf';
           break;
-        case 'Seigaiha':
-          state.colorList.length = 2;
-          state.colorList[0] = '#c0c0c0';
-          state.colorList[1] = '#ffffff';
-          break;
-        case 'Dot':
-          state.colorList.length = 2;
-          state.colorList[0] = '#000011';
-          state.colorList[1] = '#ffffff';
+          case 'Seigaiha':
+            state.colorList.length = 2;
+            state.colorList[0] = '#c0c0c0';
+            state.colorList[1] = '#ffffff';
+            break;
+          case 'Raimon':
+            state.colorList.length = 3;
+            state.colorList[0] = '#fafafa';
+            state.colorList[1] = '#ffaaaa';
+            state.colorList[2] = '#eeee88';
+            break;
+          case 'Dot':
+            state.colorList.length = 2;
+            state.colorList[0] = '#000011';
+            state.colorList[1] = '#ffffff';
+            break;
+        case 'DotCircle':
+          state.colorList.length = 3;
+          state.colorList[0] = '#fafafa';
+          state.colorList[1] = '#aaaaff';
+          state.colorList[2] = '#ffaaaa';
           break;
         case 'TableCloth':
           state.colorList.length = 2;
           state.colorList[0] = '#ffffff';
           state.colorList[1] = '#c80000';
+          break;
+        case 'GinghamCheck':
+          state.colorList.length = 4;
+          state.colorList[0] = '#D0DE59';
+          state.colorList[1] = '#F5EB3A';
+          state.colorList[2] = '#F8F5AE';
+          state.colorList[3] = '#41A74B';
           break;
         case 'DiagonalStrips':
           state.colorList.length = 2;

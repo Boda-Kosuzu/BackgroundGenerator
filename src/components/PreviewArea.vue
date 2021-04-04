@@ -22,6 +22,9 @@ import Seigaiha from "./previw/Seigaiha.vue";
 import Stars from "./previw/Stars.vue";
 import TableCloth from "./previw/TableCloth.vue";
 import Tartan from "./previw/Tartan.vue";
+import DotCircle from "./previw/DotCircle.vue";
+import GinghamCheck from "./previw/GinghamCheck.vue";
+import Raimon from "./previw/Raimon.vue";
 
 export default defineComponent({
   name: "PreviewArea",
@@ -39,6 +42,9 @@ export default defineComponent({
     Stars,
     TableCloth,
     Tartan,
+    DotCircle,
+    GinghamCheck,
+    Raimon,
   },
   setup() {
     const store = useStore();
